@@ -1,0 +1,91 @@
+shipment_id,shipment_date,origin,destination,transport_mode,distance_km,cargo_weight_tons,transit_time_hours,carrier,emissions_kg_co2e,fuel_consumed_liters,delivery_status
+SH-2024-0001,2024-01-01,Shanghai,Los Angeles,ship,11000,850,480,Maersk,125000,45000,Delivered
+SH-2024-0002,2024-01-01,Jakarta,Singapore,ship,900,420,36,Evergreen,9500,3500,Delivered
+SH-2024-0003,2024-01-02,Shenzhen,Rotterdam,ship,18500,1200,576,COSCO,185000,68000,Delivered
+SH-2024-0004,2024-01-02,Bangkok,Tokyo,air,4600,12,8,Singapore Airlines,38000,4200,Delivered
+SH-2024-0005,2024-01-03,Hanoi,Seoul,air,2400,8,5,Korean Air,25000,2800,Delivered
+SH-2024-0006,2024-01-03,Mumbai,Dubai,ship,1900,650,72,MSC,18500,6800,Delivered
+SH-2024-0007,2024-01-04,Surabaya,Melbourne,ship,4200,380,168,CMA CGM,42000,15000,Delivered
+SH-2024-0008,2024-01-04,Guangzhou,Hamburg,rail,11500,450,288,China Railway Express,28000,8500,Delivered
+SH-2024-0009,2024-01-05,Bandung,Jakarta,truck,150,25,4,Tiki,850,120,Delivered
+SH-2024-0010,2024-01-05,Ho Chi Minh,Bangkok,truck,850,48,18,Kerry Logistics,4200,580,Delivered
+SH-2024-0011,2024-01-06,Singapore,Hong Kong,ship,2600,520,60,Evergreen,28000,9800,Delivered
+SH-2024-0012,2024-01-06,Manila,San Francisco,ship,11800,920,504,ONE,138000,48000,Delivered
+SH-2024-0013,2024-01-07,Beijing,Moscow,rail,7800,380,192,Trans-Siberian,19500,5800,Delivered
+SH-2024-0014,2024-01-07,Seoul,New York,air,10900,15,16,Delta Airlines,88000,9500,Delivered
+SH-2024-0015,2024-01-08,Tokyo,London,air,9600,18,14,British Airways,95000,10200,Delivered
+SH-2024-0016,2024-01-08,Chennai,Colombo,ship,680,280,48,Hapag-Lloyd,6500,2400,Delivered
+SH-2024-0017,2024-01-09,Yangon,Singapore,ship,2100,310,84,OOCL,21000,7500,Delivered
+SH-2024-0018,2024-01-09,Kuala Lumpur,Sydney,ship,6500,580,264,APL,68000,24000,Delivered
+SH-2024-0019,2024-01-10,Dhaka,Dubai,air,3200,9,6,Emirates,28500,3100,Delivered
+SH-2024-0020,2024-01-10,Taipei,Los Angeles,ship,10500,750,456,Yang Ming,118000,42000,Delivered
+SH-2024-0021,2024-01-11,Qingdao,Southampton,ship,17800,980,552,Maersk,175000,64000,Delivered
+SH-2024-0022,2024-01-11,Semarang,Surabaya,truck,320,35,8,JNE,1850,260,Delivered
+SH-2024-0023,2024-01-12,Busan,Vancouver,ship,8200,680,384,HMM,85000,31000,Delivered
+SH-2024-0024,2024-01-12,Delhi,Frankfurt,air,6100,14,10,Lufthansa,52000,5600,Delivered
+SH-2024-0025,2024-01-13,Osaka,Seattle,ship,7800,620,360,K Line,78000,28500,Delivered
+SH-2024-0026,2024-01-13,Karachi,Jeddah,ship,2800,420,96,COSCO,27000,9800,Delivered
+SH-2024-0027,2024-01-14,Ningbo,Felixstowe,ship,18200,1100,564,Evergreen,180000,66000,Delivered
+SH-2024-0028,2024-01-14,Phnom Penh,Bangkok,truck,680,42,15,SCG Logistics,3400,470,Delivered
+SH-2024-0029,2024-01-15,Tianjin,Antwerp,ship,17500,950,540,MSC,172000,63000,Delivered
+SH-2024-0030,2024-01-15,Bangalore,Amsterdam,air,7800,16,12,KLM,68000,7300,Delivered
+SH-2024-0031,2024-01-16,Colombo,Male,ship,720,180,36,Hapag-Lloyd,7200,2600,Delivered
+SH-2024-0032,2024-01-16,Surabaya,Darwin,ship,1800,260,96,PIL,18500,6700,Delivered
+SH-2024-0033,2024-01-17,Xiamen,Los Angeles,ship,10800,820,468,OOCL,125000,45000,Delivered
+SH-2024-0034,2024-01-17,Vientiane,Hanoi,truck,480,28,12,ViettelPost,2400,340,Delivered
+SH-2024-0035,2024-01-18,Kaohsiung,Hamburg,ship,17200,890,528,CMA CGM,168000,62000,Delivered
+SH-2024-0036,2024-01-18,Chengdu,Warsaw,rail,9200,420,240,China Railway Express,22500,6800,Delivered
+SH-2024-0037,2024-01-19,Chittagong,Singapore,ship,2850,380,108,Maersk,28000,10200,Delivered
+SH-2024-0038,2024-01-19,Medan,Kuala Lumpur,ship,520,210,42,PIL,5200,1900,Delivered
+SH-2024-0039,2024-01-20,Hong Kong,Rotterdam,ship,17800,1050,552,MSC,178000,65000,Delivered
+SH-2024-0040,2024-01-20,Denpasar,Sydney,air,4600,11,9,Qantas,42000,4500,Delivered
+SH-2024-0041,2024-01-21,Macau,Los Angeles,ship,11200,720,480,Evergreen,128000,46000,Delivered
+SH-2024-0042,2024-01-21,Yangon,Mumbai,ship,2200,350,90,COSCO,22000,8000,Delivered
+SH-2024-0043,2024-01-22,Incheon,San Francisco,ship,9200,780,432,HMM,95000,35000,Delivered
+SH-2024-0044,2024-01-22,Kuching,Singapore,ship,680,180,48,ONE,6800,2500,Delivered
+SH-2024-0045,2024-01-23,Dalian,Southampton,ship,18500,980,564,Yang Ming,182000,67000,Delivered
+SH-2024-0046,2024-01-23,Colombo,Chennai,ship,680,240,48,Maersk,6500,2400,Delivered
+SH-2024-0047,2024-01-24,Kota Kinabalu,Manila,ship,1420,220,72,Evergreen,14200,5200,Delivered
+SH-2024-0048,2024-01-24,Shenzhen,Long Beach,ship,11500,890,492,COSCO,135000,49000,Delivered
+SH-2024-0049,2024-01-25,Yiwu,Madrid,rail,13200,520,312,China Railway Express,32000,9500,Delivered
+SH-2024-0050,2024-01-25,Port Klang,Jeddah,ship,6200,520,216,MSC,62000,22500,Delivered
+SH-2024-0051,2024-01-26,Fuzhou,New York,ship,12800,850,528,CMA CGM,148000,54000,Delivered
+SH-2024-0052,2024-01-26,Johor Bahru,Singapore,truck,45,18,2,Pos Malaysia,250,35,Delivered
+SH-2024-0053,2024-01-27,Nanjing,Duisburg,rail,10800,480,264,China Railway Express,26500,7900,Delivered
+SH-2024-0054,2024-01-27,Laem Chabang,Los Angeles,ship,12200,920,504,ONE,142000,52000,Delivered
+SH-2024-0055,2024-01-28,Makassar,Singapore,ship,1480,280,84,PIL,14800,5400,Delivered
+SH-2024-0056,2024-01-28,Penang,Rotterdam,ship,16800,820,516,Hapag-Lloyd,165000,60000,Delivered
+SH-2024-0057,2024-01-29,Balikpapan,Surabaya,ship,680,220,54,Evergreen,6800,2500,Delivered
+SH-2024-0058,2024-01-29,Guangzhou,Felixstowe,ship,17500,980,540,Maersk,172000,63000,Delivered
+SH-2024-0059,2024-01-30,Mandalay,Bangkok,truck,820,38,18,DHL,4100,570,Delivered
+SH-2024-0060,2024-01-30,Shanghai,Hamburg,ship,18200,1150,552,COSCO,185000,68000,Delivered
+SH-2024-0061,2024-01-31,Cebu,Tokyo,ship,2850,320,120,APL,28500,10400,Delivered
+SH-2024-0062,2024-01-31,Wuhan,Berlin,rail,9800,450,252,China Railway Express,24000,7200,Delivered
+SH-2024-0063,2024-02-01,Haiphong,Singapore,ship,1680,380,84,OOCL,16800,6100,Delivered
+SH-2024-0064,2024-02-01,Sapporo,San Francisco,air,7200,13,11,United Airlines,62000,6700,Delivered
+SH-2024-0065,2024-02-02,Nagoya,Seattle,ship,7600,580,348,K Line,75000,27500,Delivered
+SH-2024-0066,2024-02-02,Batam,Jakarta,ship,820,240,48,Tiki Lines,8200,3000,Delivered
+SH-2024-0067,2024-02-03,Lianyungang,Southampton,ship,18500,1020,564,Yang Ming,182000,67000,Delivered
+SH-2024-0068,2024-02-03,Phuket,Singapore,ship,720,180,54,Maersk,7200,2600,Delivered
+SH-2024-0069,2024-02-04,Zhanjiang,Long Beach,ship,11800,820,504,Evergreen,138000,50000,Delivered
+SH-2024-0070,2024-02-04,Pontianak,Singapore,ship,680,220,60,PIL,6800,2500,Delivered
+SH-2024-0071,2024-02-05,Xi'an,Duisburg,rail,9500,420,246,China Railway Express,23500,7000,Delivered
+SH-2024-0072,2024-02-05,Davao,Hong Kong,ship,1520,260,84,CMA CGM,15200,5500,Delivered
+SH-2024-0073,2024-02-06,Yantai,Hamburg,ship,17800,920,540,COSCO,175000,64000,Delivered
+SH-2024-0074,2024-02-06,George Town,Mumbai,ship,3200,420,132,MSC,32000,11700,Delivered
+SH-2024-0075,2024-02-07,Ningbo,Rotterdam,ship,18000,1080,552,Maersk,178000,65000,Delivered
+SH-2024-0076,2024-02-07,Siem Reap,Bangkok,truck,420,22,10,Kerry Express,2100,290,Delivered
+SH-2024-0077,2024-02-08,Qingdao,Antwerp,ship,17200,950,528,Evergreen,168000,62000,Delivered
+SH-2024-0078,2024-02-08,Pattaya,Singapore,truck,1200,48,28,SCG Logistics,6000,830,Delivered
+SH-2024-0079,2024-02-09,Tianjin,Felixstowe,ship,17500,980,540,COSCO,172000,63000,Delivered
+SH-2024-0080,2024-02-09,Lombok,Singapore,ship,1420,240,96,ONE,14200,5200,Delivered
+SH-2024-0081,2024-02-10,Xiamen,Los Angeles,ship,10800,850,480,CMA CGM,128000,46000,Delivered
+SH-2024-0082,2024-02-10,Padang,Singapore,ship,680,210,72,PIL,6800,2500,Delivered
+SH-2024-0083,2024-02-11,Dalian,Hamburg,ship,18200,1020,552,Maersk,182000,67000,Delivered
+SH-2024-0084,2024-02-11,Malacca,Port Klang,truck,120,28,4,Pos Malaysia,680,95,Delivered
+SH-2024-0085,2024-02-12,Shenzhen,New York,ship,12500,920,516,Evergreen,145000,53000,Delivered
+SH-2024-0086,2024-02-12,Manado,Singapore,ship,1820,280,108,OOCL,18200,6700,Delivered
+SH-2024-0087,2024-02-13,Chongqing,Duisburg,rail,10200,480,264,China Railway Express,25000,7500,Delivered
+SH-2024-0088,2024-02-13,Kota Bharu,Singapore,truck,520,32,14,DHL,2600,360,Delivered
+SH-2024-0089,2024-02-14,Guangzhou,Rotterdam,ship,17800,1050,540,COSCO,175000,64000,Delivered
+SH-2024-0090,2024-02-14,Ipoh,Singapore,truck,420,28,11,J&T Express,2100,290,Delivered

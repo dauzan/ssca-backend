@@ -1,0 +1,134 @@
+{
+  "scope1": {
+    "natural_gas_m3": 2.05,
+    "diesel_liter": 2.68,
+    "gasoline_liter": 2.31,
+    "lpg_kg": 3.03,
+    "coal_kg": 2.42,
+    "fuel_oil_liter": 3.15,
+    "biomass_kg": 0.05
+  },
+  "scope2": {
+    "grid_emissions": {
+      "CN": 0.555,
+      "ID": 0.709,
+      "VN": 0.587,
+      "US": 0.417,
+      "DE": 0.338,
+      "BD": 0.632,
+      "TH": 0.512,
+      "KR": 0.459,
+      "MY": 0.568,
+      "JP": 0.462,
+      "IN": 0.708,
+      "BR": 0.098,
+      "TW": 0.509,
+      "SG": 0.418,
+      "PH": 0.631,
+      "FI": 0.089,
+      "AE": 0.475,
+      "AU": 0.73,
+      "MX": 0.459,
+      "IT": 0.298,
+      "CH": 0.029,
+      "NL": 0.412,
+      "GB": 0.233,
+      "FR": 0.056,
+      "global_average": 0.475
+    }
+  },
+  "scope3": {
+    "transportation": {
+      "truck": {
+        "emission_factor_kg_co2e_per_ton_km": 0.062,
+        "fuel_consumption_liter_per_100km": 35,
+        "description": "Heavy duty truck (>16 tons)"
+      },
+      "ship": {
+        "emission_factor_kg_co2e_per_ton_km": 0.015,
+        "fuel_consumption_liter_per_nautical_mile": 150,
+        "description": "Container ship (average)"
+      },
+      "rail": {
+        "emission_factor_kg_co2e_per_ton_km": 0.022,
+        "fuel_consumption_kwh_per_ton_km": 0.03,
+        "description": "Freight train (electric/diesel mix)"
+      },
+      "air": {
+        "emission_factor_kg_co2e_per_ton_km": 0.602,
+        "fuel_consumption_liter_per_100km": 3500,
+        "description": "Air cargo (belly freight)"
+      },
+      "barge": {
+        "emission_factor_kg_co2e_per_ton_km": 0.031,
+        "fuel_consumption_liter_per_100km": 180,
+        "description": "Inland waterway transport"
+      }
+    },
+    "purchased_goods_intensity": {
+      "steel_kg_per_ton": 1800,
+      "aluminum_kg_per_ton": 11500,
+      "plastic_kg_per_ton": 2500,
+      "cement_kg_per_ton": 820,
+      "paper_kg_per_ton": 920,
+      "glass_kg_per_ton": 850,
+      "textile_kg_per_ton": 5200,
+      "electronics_kg_per_unit": 85,
+      "chemicals_kg_per_ton": 2200,
+      "food_kg_per_ton": 1800
+    },
+    "waste_treatment": {
+      "landfill_kg_per_ton": 550,
+      "incineration_kg_per_ton": 280,
+      "recycling_kg_per_ton": 45,
+      "composting_kg_per_ton": 28
+    },
+    "business_travel": {
+      "short_haul_flight_kg_per_km": 0.255,
+      "long_haul_flight_kg_per_km": 0.195,
+      "car_rental_kg_per_km": 0.192,
+      "taxi_kg_per_km": 0.215,
+      "hotel_night_kg": 12.5
+    }
+  },
+  "carbon_pricing": {
+    "eu_ets_euro_per_ton": 85,
+    "uk_ets_gbp_per_ton": 72,
+    "california_usd_per_ton": 32,
+    "china_ets_cny_per_ton": 55,
+    "korea_ets_krw_per_ton": 28000,
+    "indonesia_carbon_tax_idr_per_ton": 130000,
+    "global_social_cost_usd_per_ton": 51
+  },
+  "renewable_energy_factors": {
+    "solar_pv_kg_per_kwh": 0.045,
+    "wind_onshore_kg_per_kwh": 0.011,
+    "wind_offshore_kg_per_kwh": 0.012,
+    "hydropower_kg_per_kwh": 0.024,
+    "biomass_kg_per_kwh": 0.230,
+    "geothermal_kg_per_kwh": 0.038,
+    "nuclear_kg_per_kwh": 0.012
+  },
+  "industry_benchmarks": {
+    "steel_production_kg_per_ton": 1850,
+    "cement_production_kg_per_ton": 865,
+    "aluminum_smelting_kg_per_ton": 11800,
+    "paper_production_kg_per_ton": 950,
+    "textile_manufacturing_kg_per_ton": 5400,
+    "automotive_assembly_kg_per_vehicle": 1250,
+    "semiconductor_fabrication_kg_per_wafer": 420,
+    "food_processing_kg_per_ton": 680
+  },
+  "metadata": {
+    "source": "GHG Protocol, DEFRA 2023, EPA 2023, IEA 2024",
+    "version": "2024.1",
+    "last_updated": "2024-01-15",
+    "units": {
+      "emissions": "kg CO2e (CO2 equivalent)",
+      "energy": "kWh or liters or m3",
+      "distance": "km",
+      "weight": "tons or kg"
+    },
+    "notes": "Emission factors are averages and may vary by region, technology, and operational efficiency. For precise calculations, use supplier-specific or region-specific factors where available."
+  }
+}
