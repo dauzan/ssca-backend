@@ -1095,7 +1095,10 @@ def get_supplier_analytics():
 
 # Ensure the file exists
 def ensure_scenario_file():
-    if not os.path.exists(SCENARIO_FILE):
+    try:
+        with open(SCENARIO_FILE, "r") as f:
+            pass   # file exists, do nothing
+    except FileNotFoundError:
         with open(SCENARIO_FILE, "w") as f:
             json.dump([], f)
 
