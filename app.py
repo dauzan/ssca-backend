@@ -284,9 +284,6 @@ def optimize_supply_chain():
         print(f"Error in optimize_supply_chain: {str(e)}")
         return jsonify({'success': False, 'error': str(e)}), 500
 
-# ============================================================================
-# REGULATORY INTELLIGENCE API
-# ============================================================================
 @app.route('/api/v1/analyze/regulation', methods=['POST'])
 def analyze_regulation():
     try:
@@ -424,9 +421,6 @@ def regulatory_chatbot():
         print(f"Error in regulatory_chatbot: {str(e)}")
         return jsonify({'success': False, 'error': str(e)}), 500
 
-# ============================================================================
-# UTILITY FUNCTIONS
-# ============================================================================
 def extract_regulatory_entities(text):
     """Simplified entity extraction"""
     entities = {
