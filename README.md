@@ -1,199 +1,55 @@
-# SSCA Backend & Model AI Mindspore
+# SSCA Backend — Sustainable Supply Chain AI (SSCA) Advisor
 
-A comprehensive Flask-based backend system for analyzing and optimizing supply chain sustainability. This project provides AI-powered solutions for emission forecasting, supplier risk assessment, regulatory compliance analysis, and supply chain optimization.
+This repository contains the Flask backend for the SSCA Advisor (Sustainable Supply Chain AI): a set of services and machine-learning components used to forecast emissions, score supplier sustainability risk, analyze regulations using NLP, and optimize supply chain scenarios for cost and carbon.
 
-## 📋 Table of Contents
+Contents in this updated README:
+- Overview
+- Quick start (Docker + local)
+- API summary with main endpoints
+- Project layout and data
+- Models & how to run them
+- Troubleshooting & next steps
 
-- [Overview](#overview)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Technology Stack](#technology-stack)
-- [Installation & Setup](#installation--setup)
-- [Running the Application](#running-the-application)
-- [API Documentation](#api-documentation)
-- [Models & Components](#models--components)
-- [Data Files](#data-files)
-- [Development](#development)
+---
 
-## 🌍 Overview
+## Overview
 
-SSCA (Supply Chain Carbon Analytics) Backend is designed to help organizations understand, analyze, and reduce their carbon footprint across the entire supply chain. It combines machine learning models with advanced analytics to provide actionable insights for sustainability improvements.
+SSCA Backend exposes REST endpoints for model inference and orchestration of analytics tasks. It is intended to be run locally for development or inside Docker for deployment.
 
-### Key Capabilities:
+Primary capabilities
+- Emission forecasting (time-series models)
+- Supplier ESG & risk scoring
+- Regulatory text analysis (NER / extraction)
+- Multi-objective supply-chain optimization
+- Report generation and download
 
-- **Emission Forecasting**: LSTM-Attention based models to predict future emissions
-- **Supplier Risk Assessment**: Multi-dimensional risk scoring for supplier evaluation
-- **Regulatory Compliance**: NLP-powered analysis of regulatory documents and requirements
-- **Supply Chain Optimization**: Multi-objective optimization for sustainable scenarios
-- **ESG Analysis**: Comprehensive Environmental, Social, and Governance evaluation
-- **Report Generation**: Automated sustainability and compliance reporting
+## Quick Start
 
-## ✨ Features
+Recommended: use Docker Compose to build and run all services.
 
-### 1. Emission Forecasting
-- Predicts future carbon emissions using deep learning models
-- Processes 30 days of historical operational data
-- Supports multivariate input features (production volume, energy consumption, shipments, etc.)
-- Returns forecasts with confidence intervals
-
-### 2. Supplier Risk Scoring
-- Evaluates supplier sustainability risk across four dimensions:
-  - Environmental Impact (40% weight)
-  - Compliance Status (30% weight)
-  - Operational Resilience (20% weight)
-  - Reputational Risk (10% weight)
-- Provides composite risk scores (0-100)
-- Batch processing capabilities
-
-### 3. Regulatory Compliance Analysis
-- Extracts key regulatory information from documents using NLP
-- Identifies:
-  - Threshold values and applicability criteria
-  - Compliance deadlines
-  - Penalties and enforcement mechanisms
-  - Reporting scopes
-  - Emission targets
-  - Renewable energy requirements
-- Conversational AI for regulatory queries
-
-### 4. Supply Chain Optimization
-- Multi-objective optimization across cost and emissions
-- Scenario analysis with modal shift and renewable energy adjustments
-- Supports:
-  - Modal shift (air/truck → rail/sea)
-  - Renewable energy integration
-  - Cost-benefit analysis
-
-### 5. Report Generation
-- Automated generation of:
-  - Sustainability reports
-  - Compliance assessments
-  - Executive summaries
-  - Analytics dashboards
-
-## 📁 Project Structure
-
-```
-backend/
-├── app.py                          # Main Flask application
-├── Dockerfile                      # Docker container configuration
-├── docker-compose.yaml             # Docker Compose setup
-├── requirement.txt                 # Python dependencies
-├── README.md                       # This file
-│
-├── models/                         # Machine learning models
-│   ├── emission_forecasting.py    # LSTM-Attention emission prediction
-│   ├── optimization.py            # Multi-objective supply chain optimization
-│   ├── regulatory_nlp.py          # NLP for regulatory document analysis
-│   ├── supplier_risk.py           # Risk scoring models
-│   └── __pycache__/               # Compiled Python files
-│
-├── utils/                          # Utility modules
-│   ├── data_processor.py          # Data processing and validation
-│   ├── validators.py              # Input validation functions
-│   └── __pycache__/               # Compiled Python files
-│
-├── data/                           # Data files and resources
-│   ├── emission_factors.json      # CO2 emission factors by transport mode
-│   ├── scenarios.json             # Predefined supply chain scenarios
-│   ├── sample_logistics_routes.csv # Sample shipping routes data
-│   ├── sample_operational_logs.csv # Sample operational metrics
-│   └── sample_supplier_esg.csv    # Sample supplier ESG data
-│
-└── save_models/                    # Trained model storage
-```
-
-## 🛠 Technology Stack
-
-### Backend Framework
-- **Flask 3.1.2** - Web framework
-- **Flask-CORS** - Cross-origin resource sharing
-- **Python 3.10** - Programming language
-
-### Machine Learning & AI
-- **MindSpore** - Deep learning framework
-- **Scikit-learn 1.7.2** - Machine learning algorithms
-- **TensorFlow/Transformers** - NLP models
-- **Pandas 2.3.3** - Data manipulation
-- **NumPy 1.26.4** - Numerical computing
-- **SciPy 1.15.3** - Scientific computing
-
-### Data & Visualization
-- **Matplotlib 3.10.7** - Data visualization
-- **Pillow 12.0.0** - Image processing
-
-### Document Processing
-- **python-docx 1.2.0** - Word document generation
-- **openpyxl 3.1.5** - Excel file handling
-- **reportlab 4.4.5** - PDF generation
-
-### Additional Libraries
-- **requests 2.32.5** - HTTP client
-- **python-dotenv 1.2.1** - Environment variables
-- **regex 2025.11.3** - Advanced text processing
-
-## 💻 Installation & Setup
-
-### Prerequisites
-- Docker & Docker Compose (recommended)
-- Python 3.10+
-- pip/conda package manager
-
-### Option 1: Docker Setup (Recommended)
-
-1. **Clone the repository**
-   ```bash
-   cd /home/dauzan/ssca/backend
-   ```
-
-2. **Build and run with Docker Compose**
-   ```bash
-   docker-compose up --build
-   ```
-
-The service will be available at `http://localhost:5000`
-
-### Option 2: Local Python Setup
-
-1. **Create virtual environment**
-   ```bash
-   python3.10 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-2. **Install dependencies**
-   ```bash
-   pip install -r requirement.txt
-   ```
-
-3. **Run the application**
-   ```bash
-   python app.py
-   ```
-
-The application will start on `http://localhost:5000`
-
-## 🚀 Running the Application
-
-### Start the Server
-
-**Using Docker Compose:**
+Using Docker (recommended)
 ```bash
-docker-compose up
+cd backend
+docker-compose up --build
 ```
+The API will be available at http://localhost:5000 (default).
 
-**Using Python directly:**
+Local Python (dev)
 ```bash
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirement.txt
 python app.py
 ```
 
-### Verify Installation
-
-Check the health endpoint:
+Health check
+>>>>>>> cb58bff (release(change): change the docker file into more production mode and clean up the README.md file)
 ```bash
 curl http://localhost:5000/health
 ```
 
+<<<<<<< HEAD
 Expected response:
 ```json
 {
@@ -401,6 +257,158 @@ Contains CO2 emission factors for different transportation modes and energy sour
 
 ### `scenarios.json`
 Predefined supply chain scenarios with optimization parameters.
+=======
+---
+
+## API Summary (main endpoints)
+
+Base URL: http://localhost:5000/api/v1
+
+- POST /forecast/emissions — run emission forecasting (input: historical operational data)
+- POST /score/supplier — compute supplier risk score (input: supplier ESG fields)
+- POST /analyze/regulation — extract entities from a regulation text
+- POST /batch/analyze/regulations — batch regulatory document processing
+- POST /optimize/supply-chain — run scenario optimization
+- POST /generate/report — request report generation
+- GET /report/status/<report_id> — check report progress
+- GET /download/<report_id> — download generated report
+- GET /suppliers — list suppliers
+- POST /suppliers/upload — bulk supplier upload (CSV)
+
+For request/response contracts, inspect the route handlers in `app.py` and the helper functions in `utils/`.
+
+---
+
+## Project Layout
+
+backend/
+- app.py                # Flask app and route bindings
+- Dockerfile
+- docker-compose.yaml
+- requirement.txt       # Python deps
+- README.md
+- data/                 # sample data and configuration (emission factors, scenarios)
+- models/               # model implementations and wrappers
+- utils/                # data processing and validation helpers
+- save_models/          # persisted model artifacts
+
+Files you will commonly change
+- `models/*.py` — model inference and wrappers
+- `utils/data_processor.py` — transforms and validators for incoming payloads
+- `app.py` — route wiring and simple orchestration
+
+---
+
+## Data & Configuration
+
+- `data/emission_factors.json` — factors per transport and energy source
+- `data/sample_*` — example CSVs used in tests and docs
+- `data/scenarios.json` — pre-configured scenarios for the optimizer
+
+Inspect `data/` before running models locally; missing files will cause predictable errors.
+
+---
+
+## Models (brief)
+
+- `models/emission_forecasting.py`: time-series model (LSTM/attention style) trained on 30-day windows. Input: historical operational metrics; Output: CO2e forecast.
+- `models/supplier_risk.py`: scoring routine combining ESG features into a composite risk score.
+- `models/regulatory_nlp.py`: transformer/NER utilities for extracting thresholds, deadlines, penalties, scopes.
+- `models/optimization.py`: scenario optimizer (multi-objective) for modal shifts and renewable integration.
+
+Model artifacts are expected under `save_models/` — if you have pre-trained artifacts, place them there and adjust paths in the model loader functions.
+
+---
+
+## Development notes
+
+- Use the provided `requirement.txt` to install dependencies.
+- Keep the virtual environment isolated for local development.
+- Endpoint implementations are intentionally small — extend validation in `utils/validators.py` before exposing models publicly.
+
+Testing and quick checks
+```bash
+# run a quick smoke check
+curl -X GET http://localhost:5000/health
+
+# POST a small payload to test forecasting (example payload shape in comments in app.py)
+```
+
+---
+
+## Docker
+
+The repository includes a `Dockerfile` and `docker-compose.yaml` to streamline running the service inside containers. Use `docker-compose up --build` to recreate images after code changes.
+
+---
+
+## Production (Gunicorn)
+
+To run the Flask app in production, we recommend using `gunicorn` behind a reverse proxy (e.g., Nginx).
+
+1. Install `gunicorn` in your production environment or virtualenv:
+
+```bash
+pip install gunicorn
+```
+
+2. Recommended command (adjust `--workers` based on CPU):
+
+```bash
+gunicorn --workers 3 --worker-class gthread --threads 4 --bind 0.0.0.0:8000 app:app --access-logfile - --error-logfile - --log-level info
+```
+
+- Worker sizing suggestion: `workers = (2 x $CPU) + 1`.
+- Use `--bind 0.0.0.0:8000` (or 5000) depending on your proxy and firewall rules.
+- Ensure `app:app` matches the Flask application object name and import path in `app.py`.
+
+3. Example `systemd` unit (optional — update paths and user):
+
+```ini
+[Unit]
+Description=SSCA Advisor Gunicorn
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/path/to/backend
+Environment="PATH=/path/to/venv/bin"
+ExecStart=/path/to/venv/bin/gunicorn --workers 3 --bind 0.0.0.0:8000 app:app
+
+[Install]
+WantedBy=multi-user.target
+```
+
+4. Reverse proxy (recommended):
+- Put Nginx in front of Gunicorn to handle TLS, static files, buffering and client timeouts.
+
+Notes:
+- Set `FLASK_ENV=production` and other environment variables securely (do not keep secrets in source).
+- Monitor logs and tune worker class (`sync`, `gthread`, `gevent`) and counts according to load and IO characteristics.
+
+
+## Troubleshooting
+
+- If startup fails, check logs from Docker Compose or `python app.py` output.
+- Common issues: missing data files, dependency mismatches, or model artifacts not present.
+- If a model import fails, verify the Python path and ensure the package versions in `requirement.txt` match your environment.
+
+---
+
+## Next steps I can help with
+
+- Add example request/response JSON for each endpoint
+- Create a minimal Postman collection or OpenAPI spec
+- Add unit tests for `utils/` and core endpoints
+
+If you'd like, I can (a) add example payloads and responses to this README, (b) generate an OpenAPI spec from `app.py`, or (c) run the service and exercise a health-check endpoint.
+
+---
+
+File: [backend/README.md](backend/README.md)
+
+>>>>>>> cb58bff (release(change): change the docker file into more production mode and clean up the README.md file)
 
 **Example**:
 ```json
@@ -473,6 +481,7 @@ Sample datasets for testing and development:
 - Port exposure: 5000
 
 ### Docker Compose Services
+<<<<<<< HEAD
 - Service name: `carbon-backend`
 - Container name: `carbon-backend`
 - Volume mounts for data persistence
@@ -487,6 +496,13 @@ OMP_NUM_THREADS=2
 MKL_NUM_THREADS=2
 ```
 
+=======
+- Service name: `ouddockdock/huawei-mindspore-backend`
+- Container name: `ouddockdock/huawei-mindspore-backend`
+- Volume mounts for data persistence
+- Environment variables for model optimization
+
+>>>>>>> cb58bff (release(change): change the docker file into more production mode and clean up the README.md file)
 ## 📈 Performance Considerations
 
 - **Model Inference**: Optimized for CPU execution via MindSpore
